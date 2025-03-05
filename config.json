@@ -1,0 +1,30 @@
+{
+    "DESIGN_NAME": "ram18",
+    "VERILOG_FILES": ["dir::src/ram18.sv", "dir::src/sky130_sram_2kbyte_1rw1r_32x512_8/sky130_sram_2kbyte_1rw1r_32x512_8.v"],
+    "CLOCK_PERIOD": 25,
+    "CLOCK_PORT": "clk0",
+
+    "VDD_NETS": "vccd1",
+    "GND_NETS": "vssd1",
+    "FP_PDN_MACRO_HOOKS": "ram_inst_0 vccd1 vssd1 vccd1 vssd1",
+    "SYNTH_POWER_DEFINE": "USE_POWER_PINS",
+    "FP_PDN_CHECK_NODES": false,
+    "ERROR_ON_ILLEGAL_OVERLAPS": false,
+
+    "MAGIC_DRC_USE_GDS": false,
+    "ERROR_ON_MAGIC_DRC": false,
+
+    "MACROS": {
+        "sky130_sram_2kbyte_1rw1r_32x512_8": {
+            "instances": {
+                "ram_inst_0": {
+                    "location": [10, 150],
+                    "orientation": "N"
+                }
+            },
+            "gds": ["pdk_dir::libs.ref/sky130_sram_macros/gds/sky130_sram_2kbyte_1rw1r_32x512_8.gds"],
+            "lef": ["pdk_dir::libs.ref/sky130_sram_macros/lef/sky130_sram_2kbyte_1rw1r_32x512_8.lef"],
+            "vh": ["dir::src/sky130_sram_2kbyte_1rw1r_32x512_8.vh"]
+        }
+    }
+}
