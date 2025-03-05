@@ -1,6 +1,6 @@
 {
     "DESIGN_NAME": "ram18",
-    "VERILOG_FILES": ["dir::src/ram18.sv", "dir::src/sky130_sram_2kbyte_1rw1r_32x512_8/sky130_sram_2kbyte_1rw1r_32x512_8.v"],
+    "VERILOG_FILES": ["dir::src/ram18.sv"],
     "CLOCK_PERIOD": 25,
     "CLOCK_PORT": "clk0",
 
