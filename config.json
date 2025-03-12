@@ -17,7 +17,8 @@
     "MACROS": {
         "my_inverter": {
             "gds": ["dir::my_inverter/my_inv_buffer.gds"],
-            "lef": ["dir::my_inverter/my_inv_buffer.lef"]
+            "lef": ["dir::my_inverter/my_inv_buffer.lef"],
+            "vh": ["dir::src/my_inverter.v"]
         }
     }
 }
