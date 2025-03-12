@@ -1,4 +1,4 @@
-module my_inverter (
+module invering_buffer (
 `ifdef USE_POWER_PINS
     inout VPWR,
     inout VGND,

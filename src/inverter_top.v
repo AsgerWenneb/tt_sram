@@ -8,7 +8,7 @@ module inverter_top(
     output logic Y
 );
 
-    my_inverter buf_inst(
+    invering_buffer buf_inst(
     `ifdef USE_POWER_PINS
         .VPWR(vccd1),
         .VGND(vssd1),
