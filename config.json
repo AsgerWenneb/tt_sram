@@ -26,9 +26,9 @@
                     "orientation": "N"
                 }
             },
-            "gds": ["dir::invering_buffer/invering_buffer.gds"],
-            "lef": ["dir::invering_buffer/invering_buffer.lef"],
-            "vh": ["dir::invering_buffer/invering_buffer.vh"]
+            "gds": ["dir::src/invering_buffer/invering_buffer.gds"],
+            "lef": ["dir::src/invering_buffer/invering_buffer.lef"],
+            "vh":  ["dir::src/invering_buffer/invering_buffer.vh"]
         }
     }
 }
