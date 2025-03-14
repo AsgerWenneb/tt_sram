@@ -5,8 +5,9 @@
     "FP_SIZING": "absolute",
     "DIE_AREA": "0 0 500 500",
 
-    "VDD_NETS": ["vccd1", "VPWR"],
-    "GND_NETS": ["vssd1", "VGND"],
+    "VDD_NETS": ["vccd1"],
+    "GND_NETS": ["vssd1"],
+
     "PDN_MACRO_CONNECTIONS": ["buf_inst vccd1 vssd1 VPWR VGND,"],
     "VERILOG_POWER_DEFINE": "USE_POWER_PINS",
     "ERROR_ON_PDN_VIOLATIONS": false,
