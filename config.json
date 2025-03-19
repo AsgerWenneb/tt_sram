@@ -2,33 +2,28 @@
     "DESIGN_NAME": "inverter_top",
     "VERILOG_FILES": ["dir::src/inverter_top.v"],
 
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10,
+
     "FP_SIZING": "absolute",
     "DIE_AREA": "0 0 500 500",
 
-    "VDD_NETS": ["vccd1", "VPWR"],
-    "GND_NETS": ["vssd1", "VGND"],
+    "VDD_NETS": ["vccd1", "vccd2"],
+    "GND_NETS": ["vssd1", "vssd2"],
     "PDN_MACRO_CONNECTIONS": ["buf_inst vccd1 vssd1 VPWR VGND,"],
     "VERILOG_POWER_DEFINE": "USE_POWER_PINS",
+
     "ERROR_ON_PDN_VIOLATIONS": false,
     "ERROR_ON_ILLEGAL_OVERLAPS": false,
-
     "MAGIC_DRC_USE_GDS": false,
     "ERROR_ON_MAGIC_DRC": false,
+    "ERROR_ON_KLAYOUT_DRC": false,
 
     "MACROS": {
-        "invering_buffer": {
-            "instances": {
-                "buf_inst": {
-                    "location": [
-                        100,
-                        100
-                    ],
-                    "orientation": "N"
-                }
-            },
-            "gds": ["dir::invering_buffer/invering_buffer.gds"],
-            "lef": ["dir::invering_buffer/invering_buffer.lef"],
-            "vh": ["dir::invering_buffer/invering_buffer.vh"]
+        "sky130_inv": {
+            "gds": ["dir::sky130_inv/sky130_inv.gds"],
+            "lef": ["dir::sky130_inv/sky130_inv.lef"],
+            "vh": ["dir::sky130_inv/sky130_inv.v"]
         }
     }
 }
