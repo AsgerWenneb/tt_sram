@@ -1,0 +1,3 @@
+[submodule "sram_macro_16KB"]
+	path = sram_macro_16KB
+	url = https://github.com/efabless/sram_macro_16KB.git
