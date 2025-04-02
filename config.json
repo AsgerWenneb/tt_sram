@@ -1,15 +1,15 @@
 {
-    "DESIGN_NAME": "inverter_top",
-    "VERILOG_FILES": ["dir::src/inverter_top.v"],
+    "DESIGN_NAME": "sram2k_top",
+    "VERILOG_FILES": ["dir::src/sram2k_top.v"],
 
     "CLOCK_PORT": "clk",
     "CLOCK_PERIOD": 10,
 
     "FP_SIZING": "absolute",
-    "DIE_AREA": "0 0 500 500",
+    "DIE_AREA": "0 0 3000 3000",
 
-    "VDD_NETS": ["vccd1", "vccd2"],
-    "GND_NETS": ["vssd1", "vssd2"],
+    "VDD_NETS": ["vccd1"],
+    "GND_NETS": ["vssd1"],
     "PDN_MACRO_CONNECTIONS": ["buf_inst vccd1 vssd1 VPWR VGND,"],
     "VERILOG_POWER_DEFINE": "USE_POWER_PINS",
 
@@ -20,10 +20,16 @@
     "ERROR_ON_KLAYOUT_DRC": false,
 
     "MACROS": {
-        "sky130_inv": {
-            "gds": ["dir::sky130_inv/sky130_inv.gds"],
-            "lef": ["dir::sky130_inv/sky130_inv.lef"],
-            "vh": ["dir::sky130_inv/sky130_inv.v"]
+        "sky130_sram_2kbyte_1rw1r_32x512_8": {
+            "instances": {
+                "buf_inst": {
+                    "location": [0, 0],
+                    "orientation": "N"
+                }
+            },
+            "gds": ["dir::sram_macro_16KB/OpenRAM/sky130_sram_2kbyte_1rw1r_32x512_8.gds"],
+            "lef": ["dir::sram_macro_16KB/OpenRAM/sky130_sram_2kbyte_1rw1r_32x512_8.lef"],
+            "vh": ["dir::sram_macro_16KB/OpenRAM/sky130_sram_2kbyte_1rw1r_32x512_8.vh"]
         }
     }
 }

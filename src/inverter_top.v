@@ -1,7 +1,7 @@
 module inverter_top(
     `ifdef USE_POWER_PINS
-    inout vccd1,
-    inout vssd1,
+    inout vccd2,
+    inout vssd2,
     `endif
 
     input logic clk,
@@ -12,20 +12,21 @@ module inverter_top(
     logic buf_out;
     logic tmp;
 
-    sky130_inv buf_inst(
+    inv_test buf_inst(
     `ifdef USE_POWER_PINS
-        .VPWR(vccd1),
-        .VGND(vssd1),
+        .VPWR(vccd2),
+        .VGND(vssd2),
     `endif
         .A(A),
         .Y(buf_out)
     );
 
 
-    always @(posedge clk)
-    begin
-        tmp <= buf_out;
-        Y <= tmp;
-    end
+    assign Y = buf_out;
+    // always @(posedge clk)
+    // begin
+    //     tmp <= buf_out;
+    //     Y <= tmp;
+    // end
 
 endmodule
