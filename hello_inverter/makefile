@@ -1,7 +1,5 @@
 
 default:
-	python klayout_test.py
-	magic -rcfile ${PDK_ROOT}/sky130A/libs.tech/magic/sky130A.magicmagicrc -dnull -noconsole << EOF \
-	gds read t.gds \
-	lef write t.lef \
-	EOF
+	python3 klayout_test.py
+	magic -dnull -noconsole -rcfile ${PDK_ROOT}/sky130B/libs.tech/magic/sky130B.magicrc magic_gds2lef.tcl << quit -noprompt
+	python3 lef_port_config.py t_lef_config.csv t.lef
