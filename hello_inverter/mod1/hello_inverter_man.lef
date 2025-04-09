@@ -3,11 +3,15 @@ VERSION 5.7 ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
 MACRO hello_inverter
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN hello_inverter ;
   ORIGIN 0.190 0.000 ;
   SIZE 1.760 BY 2.720 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
     ANTENNAGATEAREA 0.247500 ;
     PORT
       LAYER li1 ;
@@ -15,6 +19,8 @@ MACRO hello_inverter
     END
   END A
   PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
     ANTENNADIFFAREA 0.429000 ;
     PORT
       LAYER li1 ;
@@ -24,7 +30,9 @@ MACRO hello_inverter
     END
   END Y
   PIN VGND
+    DIRECTION INOUT ;
     USE GROUND ;
+    SHAPE ABUTMENT ;
     PORT
       LAYER li1 ;
         RECT 0.320 0.085 0.550 0.905 ;
@@ -34,7 +42,9 @@ MACRO hello_inverter
     END
   END VGND
   PIN VPWR
+    DIRECTION INOUT ;
     USE POWER ;
+    SHAPE ABUTMENT ;
     PORT
       LAYER li1 ;
         RECT 0.000 2.635 1.380 2.805 ;
@@ -44,6 +54,8 @@ MACRO hello_inverter
     END
   END VPWR
   PIN VNB
+    DIRECTION INOUT ;
+    USE GROUND ;
     PORT
       LAYER pwell ;
         RECT 0.210 0.105 1.140 1.015 ;

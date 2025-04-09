@@ -1,6 +1,6 @@
 {
-    "DESIGN_NAME": "hello_inverter_top",
-    "VERILOG_FILES": ["dir::src/hello_inverter_top.v"],
+    "DESIGN_NAME": "t_top",
+    "VERILOG_FILES": ["dir::src/t_top.v"],
 
     "PDK": "sky130B",
 
@@ -8,18 +8,24 @@
     "CLOCK_PERIOD": 10,
 
     "FP_SIZING": "absolute",
-    "DIE_AREA": "0 0 50 50",
+    "DIE_AREA": "0 0 100 100",
 
     "VDD_NETS": ["vccd1"],
     "GND_NETS": ["vssd1"],
-    "PDN_MACRO_CONNECTIONS": ["buf_inst vccd1 vssd1 VPWR VGND"],
     "VERILOG_POWER_DEFINE": "USE_POWER_PINS",
+    "PDN_MACRO_CONNECTIONS": ["buf_inst vccd1 vssd1 VPWR VGND"],
 
     "MACROS": {
-        "hello_inverter": {
-            "gds": ["dir::hello_inverter/hello_inverter.gds"],
-            "lef": ["dir::hello_inverter/hello_inverter.lef"],
-            "vh": ["dir::hello_inverter/hello_inverter.vh"]
+        "t": {
+            "instances": {
+                "buf_inst": {
+                    "location": [50, 50],
+                    "orientation": "N"
+                }
+            },
+            "gds": ["dir::hello_inverter/t.gds"],
+            "lef": ["dir::hello_inverter/t.lef"],
+            "vh": ["dir::hello_inverter/t.vh"]
         }
     }
 }

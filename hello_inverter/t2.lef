@@ -1,0 +1,46 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO TOP
+  CLASS BLOCK ;
+  FOREIGN TOP ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 1.000 BY 1.000 ;
+  PIN A
+    PORT
+      LAYER met1 ;
+        RECT 0.000 0.000 1.000 2.000 ;
+    END
+  END A
+  PIN Y
+    PORT
+      LAYER met1 ;
+        RECT 8.000 0.000 10.000 2.000 ;
+    END
+  END Y
+  PIN VGND
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 8.000 3.000 10.000 5.000 ;
+    END
+    PORT
+      LAYER li1 ;
+        RECT 8.000 3.000 10.000 5.000 ;
+    END
+  END VGND
+  PIN VPWR
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 0.000 3.000 1.000 5.000 ;
+    END
+    PORT
+      LAYER li1 ;
+        RECT 0.000 3.000 1.000 5.000 ;
+    END
+  END VPWR
+END TOP
+END LIBRARY
+

@@ -1,0 +1,16 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO just_a_port
+  CLASS BLOCK ;
+  FOREIGN just_a_port ;
+  ORIGIN 0.100 -0.400 ;
+  SIZE 0.595 BY 0.200 ;
+  OBS
+      LAYER met1 ;
+        RECT -0.100 0.400 0.495 0.600 ;
+  END
+END just_a_port
+END LIBRARY
+

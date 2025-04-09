@@ -8,14 +8,16 @@ MACRO hello_inverter
   ORIGIN 0.190 0.000 ;
   SIZE 1.760 BY 2.720 ;
   PIN A
-    ANTENNAGATEAREA 0.247500 ;
+    DIRECTION INPUT ;
+    USE SIGNAL ;
     PORT
       LAYER li1 ;
         RECT 0.320 1.075 0.650 1.315 ;
     END
   END A
   PIN Y
-    ANTENNADIFFAREA 0.429000 ;
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
     PORT
       LAYER li1 ;
         RECT 0.720 1.485 1.050 2.465 ;
@@ -24,6 +26,7 @@ MACRO hello_inverter
     END
   END Y
   PIN VGND
+    DIRECTION INPUT ;
     USE GROUND ;
     PORT
       LAYER li1 ;
@@ -34,6 +37,7 @@ MACRO hello_inverter
     END
   END VGND
   PIN VPWR
+    DIRECTION INPUT ; 
     USE POWER ;
     PORT
       LAYER li1 ;
@@ -44,6 +48,7 @@ MACRO hello_inverter
     END
   END VPWR
   PIN VNB
+    USE GROUND ; 
     PORT
       LAYER pwell ;
         RECT 0.210 0.105 1.140 1.015 ;
@@ -52,6 +57,7 @@ MACRO hello_inverter
     END
   END VNB
   PIN VPB
+    USE POWER ;
     PORT
       LAYER nwell ;
         RECT -0.190 1.305 1.570 2.910 ;

@@ -5,8 +5,8 @@ VERSION 5.7 ;
 MACRO hello_inverter
   CLASS BLOCK ;
   FOREIGN hello_inverter ;
-  ORIGIN 0.190 0.000 ;
-  SIZE 1.760 BY 2.720 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 1.380 BY 2.720 ;
   PIN A
     ANTENNAGATEAREA 0.247500 ;
     PORT
