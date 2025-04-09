@@ -1,4 +1,3 @@
-set COMPONENT_NAME t
-
-gds read ${GDS_FILENAME}.gds
-lef write ${GDS_FILENAME}.lef
+gds read t.gds
+load t
+lef write t.lef
